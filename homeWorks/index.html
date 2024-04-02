@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./css/style.css">
+    <title>Document</title>
+</head>
+
+<body>
+    <div class="header">
+        <h1>Frontend basic</h1>
+    </div>
+    <div class="mainBlock">
+        <div class="block left">
+            <h3>Chose a homework:</h3>
+            <div class="tasks">
+                <ul>
+                    <li class="task" n="0" path="lesson1">Task1</li>
+                    <li class="task" n="1" path="lesson2">Task2</li>
+                </ul>
+            </div>
+        </div>
+        <div class="block right">
+            <h3>Info:</h3>
+            <div id="info" class="info">
+
+            </div>
+            <a href=""><button id="go">Go to TASK</button></a>
+        </div>
+    </div>
+    <div class="footer">
+        <h2 id="footer"></h2>
+    </div>
+</body>
+
+</html>
+<script>
+    let readMe = Array("Сreate a biography page.", "Create a registration form page.");
+    document.getElementById('footer').innerHTML = new Date().getFullYear();
+    document.querySelectorAll('.task').forEach(el =>
+        el.addEventListener('click', () => {
+            let n = el.getAttribute("n");
+            document.getElementById("info").innerHTML = "<p>TASK " + (n * 1 + 1) + ":</p>";
+            document.getElementById("info").innerHTML += readMe[el.getAttribute("n")];
+            document.getElementById("go").style.visibility = "visible";
+            document.getElementById("go").parentElement.setAttribute("href","./"+el.getAttribute("path")+"/index.html");
+        })
+    );
+
+</script>

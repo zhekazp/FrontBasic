@@ -1,2 +1,2 @@
 Task:
-Create a registration form page
+Create a registration form page.
