@@ -6,6 +6,9 @@ h1{
     color: #2083df;
     margin: 0;
 }
+a{
+    text-decoration: none;
+}
 h2{
     text-align: center;
     color: #2083df;
@@ -25,6 +28,15 @@ button{
     color: white;
     cursor: pointer;
     border-radius: 5px;
+}
+.header{
+    background-color: white;
+    height: 50px;
+}
+.footer{
+    background-color: white;
+    height: 50px;
+    width: 100%;
 }
 .mainBlock{
     height: calc(100vh - 100px);
