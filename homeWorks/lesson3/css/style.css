@@ -1,0 +1,48 @@
+body{
+    margin: 0;
+}
+h1{
+    text-align: center;
+    color: #2083df;
+    margin: 0;
+}
+h2{
+    text-align: center;
+    color: #2083df;
+    margin: 0;
+    padding-top: 15px;
+}
+input{
+    border-radius: 5px;
+    border: 1px solid #2083df;
+}
+textarea{
+    border-radius: 5px;
+    border: 1px solid #2083df;
+}
+button{
+    background-color: #2083df;
+    color: white;
+    cursor: pointer;
+    border-radius: 5px;
+}
+.mainBlock{
+    height: calc(100vh - 100px);
+    background-image: url(../../../imj/main.jpg);
+    min-height: 500px;
+    text-align: center;
+}
+.form{
+    width: 90%;
+    height: 80%;
+    background-color: white;
+    margin-left: 5%;
+    top: 10%;
+    position: relative;
+    padding: 10px;
+    overflow: auto;
+}
+.gender{
+    margin-top: 15px;
+    display: block;
+}
