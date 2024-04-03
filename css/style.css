@@ -1,11 +1,6 @@
 body{
     margin: 0;
 }
-h1{
-    text-align: center;
-    color: #2083df;
-    margin: 0;
-}
 a{
     text-decoration: none;
 }
@@ -30,6 +25,11 @@ button{
     border-radius: 5px;
     visibility: hidden;
 }
+.headerText{
+    color: #2083df;
+    font-size: 2em;
+    
+}
 .mainBlock{
     height: calc(100vh - 100px);
     background-image: url(../imj/main.jpg);
@@ -37,7 +37,9 @@ button{
 }
 .header{
     background-color: white;
-    height: 50px;
+    height: 40px;
+    text-align: center;
+    padding-top: 10px;
 }
 .footer{
     background-color: white;

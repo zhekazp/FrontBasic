@@ -4,7 +4,6 @@ body{
 h1{
     text-align: center;
     color: #2083df;
-    margin: 0;
 }
 a{
     text-decoration: none;
@@ -31,12 +30,19 @@ button{
 }
 .header{
     background-color: white;
-    height: 50px;
+    height: 40px;
+    padding-top: 10px;
+    text-align: center;
 }
 .footer{
     background-color: white;
     height: 50px;
     width: 100%;
+}
+.headerText{
+    color: #2083df;
+    margin: 0;
+    font-size: 2em;
 }
 .mainBlock{
     height: calc(100vh - 100px);
@@ -51,7 +57,6 @@ button{
     margin-left: 5%;
     top: 10%;
     position: relative;
-    padding-top: 10px;
     overflow: auto;
 }
 .gender{
