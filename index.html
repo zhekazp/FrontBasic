@@ -21,6 +21,7 @@
                     <li class="task" n="0" path="lesson1">Task1</li>
                     <li class="task" n="1" path="lesson2">Task2</li>
                     <li class="task" n="2" path="lesson3">Task3</li>
+                    <li class="task" n="3" path="lesson4">Task4</li>
                 </ul>
             </div>
         </div>
@@ -40,7 +41,7 @@
 </html>
 <script>
     let readMe = Array("Сreate a biography page.", "Create a registration form page.",
-    "Create a registration form page with css.");
+    "Create a registration form page with css.","Create three blocks (width: 400px, height: 500px) using margin, padding e.t.c.");
     document.getElementById('footer').innerHTML = new Date().getFullYear();
     document.querySelectorAll('.task').forEach(el =>
         el.addEventListener('click', () => {

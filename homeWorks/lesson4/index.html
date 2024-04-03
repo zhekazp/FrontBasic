@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./css/style.css">
+    <link rel="shortcut icon" href="../../imj/favicon.png" type="image/x-icon">
+    <title>FrontBasic - first using of css</title>
+</head>
+
+<body>
+    <div class="header">
+        <a href="/FrontBasic/"><span class="headerText">Frontend basic</span></a>
+    </div>
+    <div class="mainBlock">
+        <div class="blocks block1">
+            <h2>User - 1</h2>
+            <p class="infoDescription">User name: <span class="info">Tom</span></p>
+            <p class="infoDescription">User surname: <span class="info">Andersen</span></p>
+            <p class="infoDescription">User age: <span class="info">30</span></p>
+            <p class="infoDescription">User gender: <span class="info">male</span></p>
+        </div>
+        
+        <div class="blocks block2">
+            <h2>User - 2</h2>
+            <p class="infoDescription">User name: <span class="info">Rita</span></p>
+            <p class="infoDescription">User surname: <span class="info">Shidler</span></p>
+            <p class="infoDescription">User age: <span class="info">28</span></p>
+            <p class="infoDescription">User gender: <span class="info">female</span></p>
+        </div>
+        
+        <div class="blocks block3">
+            <h2>User - 3</h2>
+            <p class="infoDescription">User name: <span class="info">Jack</span></p>
+            <p class="infoDescription">User surname: <span class="info">Deniels</span></p>
+            <p class="infoDescription">User age: <span class="info">42</span></p>
+            <p class="infoDescription">User gender: <span class="info">male</span></p>
+        </div>
+    </div>
+    <div class="footer">
+        <h2 id="footer"></h2>
+    </div>
+
+
+
+</body>
+
+</html>
+<script>
+    document.getElementById('footer').innerHTML = new Date().getFullYear();
+</script>
