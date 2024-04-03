@@ -51,10 +51,17 @@ button{
     margin-left: 5%;
     top: 10%;
     position: relative;
-    padding: 10px;
+    padding-top: 10px;
     overflow: auto;
 }
 .gender{
     margin-top: 15px;
     display: block;
+}
+@media (max-width: 600px) {
+    .surName{
+     display: block;
+     margin-top: 10px;
+    }
+    
 }
