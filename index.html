@@ -46,7 +46,7 @@
         el.addEventListener('click', () => {
             let n = el.getAttribute("n");
             document.getElementById("info").innerHTML = "<p>TASK " + (n * 1 + 1) + ":</p>";
-            document.getElementById("info").innerHTML += readMe[el.getAttribute("n")];
+            document.getElementById("info").innerHTML += readMe[n];
             document.getElementById("go").style.visibility = "visible";
             document.getElementById("go").parentElement.setAttribute("href","./homeWorks/"+el.getAttribute("path")+"/index.html");
         })
