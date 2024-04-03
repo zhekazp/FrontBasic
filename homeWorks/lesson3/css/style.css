@@ -43,6 +43,7 @@ button{
     color: #2083df;
     margin: 0;
     font-size: 2em;
+    font-weight: bold;
 }
 .mainBlock{
     height: calc(100vh - 100px);

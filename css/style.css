@@ -28,7 +28,7 @@ button{
 .headerText{
     color: #2083df;
     font-size: 2em;
-    
+    font-weight: bold;
 }
 .mainBlock{
     height: calc(100vh - 100px);
