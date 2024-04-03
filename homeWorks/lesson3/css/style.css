@@ -65,9 +65,8 @@ button{
     display: block;
 }
 @media (max-width: 600px) {
-    .surName{
+    .mobile{
      display: block;
      margin-top: 10px;
     }
-    
 }
