@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./css/style.css">
+    <link rel="shortcut icon" href="../../img/favicon.png" type="image/x-icon">
+    <title>FrontBasic - first using of css</title>
+</head>
+
+<body>
+    <div class="header">
+        <a href="/FrontBasic/"><span class="headerText">Frontend basic</span></a>
+    </div>
+    <div class="mainBlock">
+        <div class="blocks block1">
+            <img class="foto" src="./img/Sir_Tim_Berners-Lee.jpg" alt="Berners-Lee" >
+            <p class="infoDescription">Name: <span class="info">Tim</span></p>
+            <p class="infoDescription">Surname: <span class="info">Berners-Lee</span></p>
+            <p class="infoDescription">Age: <span class="info">68</span></p>
+            <p class="infoDescription">Gender: <span class="info">male</span></p>
+        </div>
+        
+        <div class="blocks block2">
+            <img class="foto" src="./img/bil.jpg" alt="Bill" >
+            <p class="infoDescription">Name: <span class="info">Bill</span></p>
+            <p class="infoDescription">Surname: <span class="info">Gates</span></p>
+            <p class="infoDescription">Age: <span class="info">68</span></p>
+            <p class="infoDescription">Gender: <span class="info">male</span></p>
+        </div>
+        
+        <div class="blocks block3">
+            <img class="foto" src="./img/Brendan_Eich.jpg" alt="Eich" >
+            <p class="infoDescription">Name: <span class="info">Brendan</span></p>
+            <p class="infoDescription">Surname: <span class="info">Eich</span></p>
+            <p class="infoDescription">Age: <span class="info">62</span></p>
+            <p class="infoDescription">Gender: <span class="info">male</span></p>
+        </div>
+    </div>
+    <div class="footer">
+        <h2 id="footer"></h2>
+    </div>
+
+
+
+</body>
+
+</html>
+<script>
+    document.getElementById('footer').innerHTML = new Date().getFullYear();
+</script>
