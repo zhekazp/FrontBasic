@@ -1,0 +1,158 @@
+body{
+    margin: 0;
+}
+h1{
+    text-align: center;
+    color: #2083df;
+}
+a{
+    text-decoration: none;
+}
+h2{
+    text-align: center;
+    color: #fa558f;
+    margin: 0;
+    padding-top: 15px;
+}
+
+.header{
+    height: 40px;
+    padding-top: 10px;
+    text-align: center;
+    position: fixed;
+    width: 100%;
+    background-color: black;
+    z-index: 1;
+}
+.footer{
+    background-color: black;
+    height: 50px;
+    width: 100%;
+}
+.headerText{
+    color: #fa558f;
+    margin: 0;
+    font-size: 2em;
+    font-weight: bold;
+}
+.mainBlock{
+    min-height: calc(100vh - 10px);
+    min-height: 500px;
+    text-align: center;
+    display: flex;
+    padding-top: 100px;
+    box-sizing: border-box;
+}
+.menu{
+    background-color: white;
+    position: fixed;
+    top:50px;
+    height: 50px;
+    width: 100px;
+    border-bottom: 1px solid #eee;
+    width: 100%;
+    z-index: 1;
+}
+.side{
+    width: 25%;
+    border-right: 1px solid #eee;
+    
+}
+.shop{
+    width: 75%;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+.userInfo{
+    height: 50%;
+    color: black;
+}
+.info{
+    color: #fa558f;
+}
+.catalog{
+    width: 250px;
+    color: white;
+    background-color: #fa558f;
+    margin: 5px 0 0 4%;
+    font-size: 20px;
+    padding-top: 10px;
+    position: sticky;
+}
+.catItem{
+    display: none;
+    background-color: white;
+    border: 1px solid #fa558f;
+}
+.catalog:hover .catItem{
+    display: block;
+}
+.item{
+    margin-top: 10px;
+    font-size: 18px;
+    text-align: left;
+    background-color: white;
+    cursor: pointer;
+    padding: 5px 0 5px 15px;
+    color: black;
+    border-bottom: 1px solid #fa558f;
+}
+.active{
+    color: #fa558f;
+    cursor: default;
+}
+.item:hover{
+    background-color: #fcfcee;
+}
+.active:hover{
+    background-color: white;
+}
+.cart{
+    position: absolute;
+    top:15px;
+    right: 20px;
+    cursor: pointer;
+}
+
+.productGrid {
+    width: 22%;
+    min-width: 245px;
+    border: 1.5px solid #eee;
+    margin: 20px;
+    cursor: pointer;
+    font-size: 18px;
+}
+.productInfo{
+    font-size: 18px;
+    background-color: #eaeaea;
+    padding: 10px 0;
+}
+.price{
+    font-size: 20px;
+    font-weight: bold;
+}
+.productPic{
+        width: 100%;
+}
+.itemAdd{
+    color: #fff;
+    text-decoration: none;
+    font-weight: 600;
+    padding: 0.7em 1.5em;
+    font-size: 18px;
+    display: inline-block;
+    border-radius: 5px;
+    background: #fa558f;
+    border: none;
+    outline: none;
+    cursor: pointer;
+}
+@media (max-width:900px) {
+    .blocks{
+        position: static;
+        width:80%;
+        margin-left: 10%;
+        margin-bottom: 10px;
+    }
+}

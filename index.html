@@ -18,6 +18,7 @@
             <h3>Chose a homework:</h3>
             <div class="tasks">
                 <ul>
+                    <li class="task" n="5" path="lesson6">Task6</li>
                     <li class="task" n="4" path="lesson5">Task5</li>
                     <li class="task" n="3" path="lesson4">Task4</li>
                     <li class="task" n="2" path="lesson3">Task3</li>
@@ -43,7 +44,8 @@
 <script>
     let readMe = Array("Сreate a biography page.", "Create a registration form page.",
     "Create a registration form page with css.","Create three blocks (width: 400px, height: 500px) using margin, padding e.t.c.",
-    "Create three blocks with users info using position e.t.c.");
+    "Create three blocks with users info using position e.t.c.",
+    "Create two blocks with user info and products using flex");
     document.getElementById('footer').innerHTML = new Date().getFullYear();
     document.querySelectorAll('.task').forEach(el =>
         el.addEventListener('click', () => {

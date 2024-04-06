@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./css/style.css">
+    <link rel="shortcut icon" href="../../img/favicon.png" type="image/x-icon">
+    <title>FrontBasic - first using of css</title>
+</head>
+
+<body>
+    <header class="header">
+        <a href="/FrontBasic/"><span class="headerText">Frontend basic</span></a>
+        <img class="cart" src="./img/cart.png" alt="cart">
+        <div class="menu">
+            <div class="catalog">
+                Catalog
+                <div class="catItem">
+                    <div class="item">- Computers</div>
+                    <div class="item active">- Noteboks</div>
+                    <div class="item">- Software</div>
+                </div>
+            </div>
+ 
+        </div>
+    </header>
+    <main class="mainBlock">
+        <aside class="side">
+                       <div class="userInfo">
+            <h3>User info</h3>
+            <p>Login : <span class="info">TestUser</span></p>
+            <p>Balance: <span class="info">1000$</span></p>
+        </div>
+        </aside>
+        <div class="shop">
+            <div class="productGrid">
+                 <img class="productPic" src="./img/asus.avif" alt="asus">
+                 <div class="productInfo">
+                    <span>Asus1</span>
+                    <p class="price">1000$</p>
+                    <button class="itemAdd">add to cart</button>
+                </div>
+            </div>
+            <div class="productGrid">
+                <img class="productPic" src="./img/asus.avif" alt="asus">
+                <div class="productInfo">
+                   <span>Asus2</span>
+                   <p class="price">1000$</p>
+                   <button class="itemAdd">add to cart</button>
+               </div>
+            </div>
+            <div class="productGrid">
+                <img class="productPic" src="./img/asus.avif" alt="asus">
+                <div class="productInfo">
+                   <span>Asus3</span>
+                   <p class="price">1000$</p>
+                   <button class="itemAdd">add to cart</button>
+               </div>
+            </div>
+            <div class="productGrid"> <img class="productPic" src="./img/asus.avif" alt="asus">
+                <div class="productInfo">
+                   <span>Asus4</span>
+                   <p class="price">1000$</p>
+                   <button class="itemAdd">add to cart</button>
+               </div></div>
+            <div class="productGrid">
+                <img class="productPic" src="./img/asus.avif" alt="asus">
+                <div class="productInfo">
+                   <span>Asus5</span>
+                   <p class="price">1000$</p>
+                   <button class="itemAdd">add to cart</button>
+               </div>
+            </div>
+            <div class="productGrid">
+                <img class="productPic" src="./img/asus.avif" alt="asus">
+                <div class="productInfo">
+                   <span>Asus6</span>
+                   <p class="price">1000$</p>
+                   <button class="itemAdd">add to cart</button>
+               </div>
+            </div>
+            <div class="productGrid">
+                <img class="productPic" src="./img/asus.avif" alt="asus">
+                <div class="productInfo">
+                   <span>Asus7</span>
+                   <p class="price">1000$</p>
+                   <button class="itemAdd">add to cart</button>
+               </div>
+            </div>
+        </div>
+    </main>
+    <footer class="footer">
+        <h2 id="footer"></h2>
+    </footer>
+</body>
+</html>
+<script>
+    document.getElementById('footer').innerHTML = new Date().getFullYear();
+</script>
