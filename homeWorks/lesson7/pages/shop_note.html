@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../css/style.css">
+    <link rel="stylesheet" href="../css/shop.css">
+    <link rel="shortcut icon" href="../../../img/favicon.png" type="image/x-icon">
+    <title>FrontBasic - first using of css</title>
+</head>
+
+<body>
+    <header class="header">
+        <div class="phone">
+            <img src="../img/phone.png" alt="phone_number" width="22px" height="22px">
+            <span class="phoneNumber">+38 (077) 777-77-77</span>
+        </div>
+        <a href="/homeWorks/lesson7/index.html"><span class="headerText">Computer World</span></a>
+        <a href="./cart.html">
+            <img class="cart" src="../img/cart.png" alt="cart">
+        </a>
+        <div class="menu">
+            <div class="lefthead">
+                <div class="catalog">
+                    <span class="text">CATALOG</span>
+                    <div class="catItem">
+                        <a href="./shop_comp.html">
+                            <div class="item">- Computers</div>
+                        </a>
+                        <div class="item active">- Noteboks</div>
+                        <a href="./shop_monitors.html">
+                            <div class="item">- Monitors</div>
+                        </a>
+                    </div>
+                </div>
+            </div>
+            <div class="righthead">
+                <div class="menuSmall">MENU
+                    <div class="smallMenuBlock">
+                        <a href="/homeWorks/lesson7/index.html">
+                            <span class="smallItems">HOME</span>
+                        </a>
+                        <a href="./about.html">
+                            <span class="smallItems">ABAUT</span>
+                        </a>
+                        <a href="./contacts.html">
+                            <span class="smallItems">CONTACTS</span>
+                        </a>
+                    </div>
+                </div>
+                <a class="menuItems" href="/homeWorks/lesson7/index.html">
+                    <span>HOME</span>
+                </a>
+                <a class="menuItems" href="./about.html">
+                    <span>ABAUT</span>
+                </a>
+                <a class="menuItems" href="./contacts.html">
+                    <span>CONTACTS</span>
+                </a>
+            </div>
+        </div>
+    </header>
+    <main class="mainBlockShop">
+        <aside class="side">
+            <div>
+                <h3>SORT</h3>
+                <div class="sort">
+                    <div class="sortItem">Popular</div>
+                    <div class="sortItem">Price ↑</div>
+                    <div class="sortItem">Price ↓</div>
+                    <div class="sortItem">New</div>
+                </div>
+                <h3>GROUP</h3>
+                <div>
+                    <label class="grouping">
+                        <input type="checkbox">Core i3
+                    </label>
+                    <label class="grouping">
+                        <input type="checkbox">Core i5
+                    </label>
+                    <label class="grouping">
+                        <input type="checkbox">Core i8
+                    </label>
+                </div>
+            </div>
+
+        </aside>
+        <div class="shop">
+            <div class="productGrid">
+                <img class="productPic" src="../img/asus.avif" alt="asus">
+                <div class="productInfo">
+                    <span>Asus1</span>
+                    <p class="price">1000$</p>
+                    <button class="itemAdd">add to cart</button>
+                </div>
+            </div>
+            <div class="productGrid">
+                <img class="productPic" src="../img/asus.avif" alt="asus">
+                <div class="productInfo">
+                    <span>Asus2</span>
+                    <p class="price">1000$</p>
+                    <button class="itemAdd">add to cart</button>
+                </div>
+            </div>
+            <div class="productGrid">
+                <img class="productPic" src="../img/asus.avif" alt="asus">
+                <div class="productInfo">
+                    <span>Asus3</span>
+                    <p class="price">1000$</p>
+                    <button class="itemAdd">add to cart</button>
+                </div>
+            </div>
+            <div class="productGrid"> <img class="productPic" src="../img/asus.avif" alt="asus">
+                <div class="productInfo">
+                    <span>Asus4</span>
+                    <p class="price">1000$</p>
+                    <button class="itemAdd">add to cart</button>
+                </div>
+            </div>
+            <div class="productGrid">
+                <img class="productPic" src="../img/asus.avif" alt="asus">
+                <div class="productInfo">
+                    <span>Asus5</span>
+                    <p class="price">1000$</p>
+                    <button class="itemAdd">add to cart</button>
+                </div>
+            </div>
+            <div class="productGrid">
+                <img class="productPic" src="../img/asus.avif" alt="asus">
+                <div class="productInfo">
+                    <span>Asus6</span>
+                    <p class="price">1000$</p>
+                    <button class="itemAdd">add to cart</button>
+                </div>
+            </div>
+            <div class="productGrid">
+                <img class="productPic" src="../img/asus.avif" alt="asus">
+                <div class="productInfo">
+                    <span>Asus7</span>
+                    <p class="price">1000$</p>
+                    <button class="itemAdd">add to cart</button>
+                </div>
+            </div>
+        </div>
+    </main>
+    <footer class="footer">
+        <h2 id="footer"></h2>
+    </footer>
+</body>
+
+</html>
+<script>
+    document.getElementById('footer').innerHTML = new Date().getFullYear();
+</script>

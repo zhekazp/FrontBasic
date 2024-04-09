@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./css/style.css">
+    <link rel="shortcut icon" href="../../img/favicon.png" type="image/x-icon">
+    <title>FrontBasic - first using of css</title>
+</head>
+
+<body>
+    <header class="header">
+        <div class="phone">
+            <img src="./img/phone.png" alt="phone_number" width="22px" height="22px">
+            <span class="phoneNumber">+38 (077) 777-77-77</span>
+        </div>
+        <a href="/homeWorks/lesson7/index.html"><span class="headerText">Computer World</span></a>
+        <a href="./pages/cart.html">
+            <img class="cart" src="./img/cart.png" alt="cart">
+        </a>
+        <div class="menu">
+            <div class="lefthead">
+                <div class="catalog">
+                    <span class="text">CATALOG</span>
+                    <div class="catItem">
+                        <a href="./pages/shop_comp.html">
+                            <div class="item">- Computers</div>
+                        </a>
+                        <a href="./pages/shop_note.html">
+                            <div class="item">- Noteboks</div>
+                        </a>
+                        <a href="./pages/shop_monitors.html">
+                            <div class="item">- Monitors</div>
+                        </a>
+                    </div>
+                </div>
+            </div>
+            <div class="righthead">
+                <div class="menuSmall">MENU
+                    <div class="smallMenuBlock">
+                        <span class="smallItems smallActive">HOME</span>
+                        <a class="smallItems" href="./pages/about.html">        
+                            <span>ABAUT</span>
+                        </a>
+                        <a class="smallItems" href="./pages/contacts.html">        
+                            <span>CONTACTS</span>
+                        </a>    
+                    </div>
+                </div>
+                <span class="menuItems menuActiveItem">HOME</span>
+                <a class="menuItems" href="./pages/about.html">
+                    <span >ABAUT</span>
+                </a>
+                <a class="menuItems" href="./pages/contacts.html">
+                    <span>CONTACTS</span>
+                </a>
+            </div>
+        </div>
+    </header>
+    <main class="mainBlock">
+        <p class="mainText">Best Computers</p>
+        <p class="mainText">Cheapest prices</p>
+    </main>
+    <footer class="footer">
+        <h2 id="footer"></h2>
+    </footer>
+</body>
+
+</html>
+<script>
+    document.getElementById('footer').innerHTML = new Date().getFullYear();
+</script>

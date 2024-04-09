@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../css/style.css">
+    <link rel="stylesheet" href="../css/cart.css">
+    <link rel="shortcut icon" href="../../../img/favicon.png" type="image/x-icon">
+    <title>FrontBasic - first using of css</title>
+</head>
+
+<body>
+    <header class="header">
+        <div class="phone">
+            <img src="../img/phone.png" alt="phone_number" width="22px" height="22px">
+            <span class="phoneNumber">+38 (077) 777-77-77</span>
+        </div>
+        <a href="/homeWorks/lesson7/index.html"><span class="headerText">Computer World</span></a>
+        <a href="./cart.html">
+            <img class="cart" src="../img/cart.png" alt="cart">
+        </a>
+        <div class="menu">
+            <div class="lefthead">
+                <div class="catalog">
+                    <span class="text">CATALOG</span>
+                    <div class="catItem">
+                        <a href="./shop_comp.html">
+                            <div class="item">- Computers</div>
+                        </a>
+                        <a href="./shop_note.html">
+                            <div class="item">- Noteboks</div>
+                        </a>    
+                        <a href="./shop_monitors.html">
+                            <div class="item">- Monitors</div>
+                        </a>
+                    </div>
+                </div>
+            </div>
+            <div class="righthead">
+                <div class="menuSmall">MENU
+                    <div class="smallMenuBlock">
+                        <a href="/homeWorks/lesson7/index.html">
+                            <span class="smallItems">HOME</span>
+                        </a>
+                        <a href="./about.html">
+                            <span class="smallItems">ABAUT</span>
+                        </a>
+                        <a href="./contacts.html">
+                            <span class="smallItems">CONTACTS</span>
+                        </a>
+                    </div>
+                </div>
+                <a class="menuItems" href="/homeWorks/lesson7/index.html">
+                    <span>HOME</span>
+                </a>
+                <a class="menuItems" href="./about.html">
+                    <span>ABAUT</span>
+                </a>
+                <a class="menuItems" href="./contacts.html">
+                    <span>CONTACTS</span>
+                </a>
+            </div>
+        </div>
+    </header>
+    <main class="mainBlockShop">
+        <div class="cartBlock">
+            <div class="productBox">
+                <img class="cartImg" src="../img/comp.avif" alt="">
+                <div class="cartProductDescription">
+                    <h3>Best computer Asus 77777</h3>
+                    <p>1000$</p>
+                </div>        
+            </div>
+            <div class="productBox">
+                <img class="cartImg" src="../img/asus.avif" alt="">
+                <div class="cartProductDescription">
+                    <h3>Notebook best seler i100</h3>
+                    <p>1000$</p>
+                </div>        
+            </div>   
+        </div>
+        <aside class="side">
+            <h3>Quantity:</h3>
+            <p>2</p>
+            <h3>Totalprice:</h3>
+            <p>2000$</p>
+            <Button class="pay">PAY</Button>
+        </aside>
+    </main>
+    <footer class="footer">
+        <h2 id="footer"></h2>
+    </footer>
+</body>
+
+</html>
+<script>
+    document.getElementById('footer').innerHTML = new Date().getFullYear();
+</script>

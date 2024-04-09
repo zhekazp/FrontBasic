@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../css/style.css">
+    <link rel="stylesheet" href="../css/contacts.css">
+    <link rel="shortcut icon" href="../../../img/favicon.png" type="image/x-icon">
+    <title>FrontBasic - first using of css</title>
+</head>
+
+<body>
+    <header class="header">
+        <div class="phone">
+            <img src="../img/phone.png" alt="phone_number" width="22px" height="22px">
+            <span class="phoneNumber">+38 (077) 777-77-77</span>
+        </div>
+        <a href="/homeWorks/lesson7/index.html"><span class="headerText">Computer World</span></a>
+        <a href="./cart.html">
+            <img class="cart" src="../img/cart.png" alt="cart">
+        </a>
+        <div class="menu">
+            <div class="lefthead">
+                <div class="catalog">
+                    <span class="text">CATALOG</span>
+                    <div class="catItem">
+                        <a href="./shop_comp.html">
+                            <div class="item">- Computers</div>
+                        </a>
+                        <a href="./shop_note.html">
+                            <div class="item">- Noteboks</div>
+                        </a>
+                        <a href="./shop_monitors.html">
+                            <div class="item">- Monitors</div>
+                        </a>
+                    </div>
+                </div>
+            </div>
+            <div class="righthead">
+                <div class="menuSmall">MENU
+                    <div class="smallMenuBlock">
+                        <a  href="/homeWorks/lesson7/index.html">
+                        <span class="smallItems">HOME</span>
+                        </a>
+                        <a  href="./about.html">
+                            <span class="smallItems">ABAUT</span>
+                        </a>
+                        <span class="smallItems smallActive">CONTACTS</span>
+                    </div>
+                </div>
+                <a class="menuItems" href="/homeWorks/lesson7/index.html">
+                    <span>HOME</span>
+                </a>
+                <a class="menuItems" href="./about.html">
+                    <span>ABAUT</span>
+                </a>
+                <span class="menuItems menuActiveItem">CONTACTS</span>
+            </div>
+        </div>
+    </header>
+    <main class="mainBlock">
+        <h1>Contacts</h1>
+        <form class="form">
+            <div>
+                <label>Name:
+                    <input type="text" name="firstName">
+                </label>
+            </div>
+            <div>
+                <label>Email:
+                    <input type="email" name="Email">
+                </label>
+            </div>
+            <div>
+                <textarea  name="info" cols="30" rows="5"></textarea>
+            </div>
+            <button class="submit">Sent</button>
+        </form>
+        <p class="contactText">You can sent us a message or call to us : +38 (077) 777-77-77</p>
+    </main>
+    <footer class="footer">
+        <h2 id="footer"></h2>
+    </footer>
+</body>
+
+</html>
+<script>
+    document.getElementById('footer').innerHTML = new Date().getFullYear();
+</script>
