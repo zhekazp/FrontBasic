@@ -7,4 +7,11 @@
     padding: 10px;
     margin: 20px;
 }
-
+@media (max-width: 800px) {
+    .tasksBlock{
+        height: 150px;
+    }
+    img{
+        width: 100%;
+    }
+}

@@ -79,7 +79,7 @@ button{
     position: relative;
     left:15%;
     margin-top: 50px;
-    padding-bottom: 10px;
+    padding: 10px;
 }
 .block1{
     height: 100%;
@@ -103,4 +103,9 @@ button{
 }
 .clear{
     right:20px;
+}
+@media (max-width: 800px) {
+    .tasksBlock{
+        height: 150px;
+    }
 }
