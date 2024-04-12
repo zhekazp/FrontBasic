@@ -50,7 +50,7 @@ console.log();
 //Task4
 
 function sort(arr){
-let arrLength=arr.length;
+let arrLength=arr.length-1;
 while(arrLength>0){
     for (let i=0;i<arrLength;i++){
         if(arr[i] > arr[i+1]){
