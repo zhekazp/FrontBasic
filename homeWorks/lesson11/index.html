@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./css/style.css">
+    <link rel="stylesheet" href="./css/tasks.css">
+    <link rel="shortcut icon" href="../../img/favicon.png" type="image/x-icon">
+    <script src="./js/tasks.js" defer></script>
+    <script src="./js/main.js" defer></script>
+    <title>FrontBasic - JS - work with DOM</title>
+</head>
+<body>
+    <header class="header">
+        <a href="/FrontBasic/"><span class="headerText">Frontend basic</span></a>
+    </header>
+    <main class="mainBlock">
+        <div class="tasksBlock">
+            <h2>Chose a Task</h2>
+            <ul class="tasks">
+                <li onclick="showBlock(1)" class="task">Task1</li>
+                <li onclick="showBlock(2)" class="task">Task2</li>
+                <li onclick="showBlock(3)" class="task">Task3</li>
+            </ul>
+            <button onclick="runButton();" class="execute button">Excute</button>
+            <button onclick="clearButton();" class="clear button">Clear</button>
+        </div>
+        <div class="desigionsBlock">
+            <h2></h2>
+            <h3></h3>
+            <div class="block1">
+            
+            </div>
+            <div class="block2">
+            
+            </div>
+            <div class="block3">
+            
+            </div>
+        </div>
+    </main>
+    <footer class="footer">
+        <h2 id="footer"></h2>
+    </footer>
+</body>
+
+</html>
