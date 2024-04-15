@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./css/style.css">
+    <link rel="stylesheet" href="./css/tasks.css">
+    <link rel="shortcut icon" href="../../img/favicon.png" type="image/x-icon">
+    <script src="./js/tasks.js" defer></script>
+    <script src="./js/main.js" defer></script>
+    <title>FrontBasic - JS - work with DOM</title>
+</head>
+
+<body>
+    <header class="header">
+        <a href="/FrontBasic/"><span class="headerText">Frontend basic</span></a>
+    </header>
+    <main class="mainBlock">
+        <div class="tasksBlock">
+            <h2>Chose a Task</h2>
+            <ul class="tasks">
+                <li onclick="showBlock(1)" class="task">Task1</li>
+                <li onclick="showBlock(2)" class="task">Task2</li>
+            </ul>
+            <button onclick="runButton();" class="execute button">Reload</button>
+            <button onclick="clearButton();" class="clear button">Clear</button>
+        </div>
+        <div class="desigionsBlock">
+            <h2></h2>
+            <h3></h3>
+            <div class="block1">
+                <form>
+                    <div>
+                        <p id="err1" class="err"></p>
+                        <label>Login:
+                            <input type="text" name="login">
+                        </label>
+                    </div>
+                    <div>
+                        <p id="err2" class="err"></p>
+                        <label>Password:
+                            <input type="text" name="password">
+                        </label>
+                    </div>
+                    <div>
+                        <p id="err3" class="err"></p>
+                        <label>Confirm:
+                            <input type="text" name="passConfirm">
+                        </label>
+                    </div>
+                    <button class="taskBut" type="submit">SENT</button>
+                </form>
+            </div>
+            <div class="block2">
+                <p id="err4" class="err"></p>
+                <label>a:
+                    <input class="math" type="text">
+                </label>
+                <label>b:
+                    <input class="math" type="text">
+                </label>
+                <label>c:
+                    <input class="math" type="text">
+                </label>
+                <div>
+                    <h3>Results:</h3>
+                    <div>
+                        <label>x1:
+                            <input class="result" type="text" disabled>
+                        </label>
+                    </div>
+                    <div>
+                        <label>x2:
+                            <input class="result" type="text" disabled>
+                        </label>
+                    </div>
+                </div>
+                <button class="taskBut" id="calculate">Calculate</button>
+            </div>
+        </div>
+    </main>
+    <footer class="footer">
+        <h2 id="footer"></h2>
+    </footer>
+</body>
+
+</html>

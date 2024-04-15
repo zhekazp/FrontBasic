@@ -1,0 +1,60 @@
+form {
+    margin-top: 40px;
+}
+
+input {
+    border-radius: 5px;
+    border: 1px solid #2083df;
+}
+
+.err {
+    color: red;
+    font-size: 14px;
+    height: 14px;
+}
+
+.taskBut {
+    margin-top: 25px;
+}
+
+.modalBack {
+    position: fixed;
+    z-index: 2;
+    left: 0;
+    top: 0;
+    width: 100vw;
+    height: 100vh;
+    background-color: rgba(0, 0, 0, 0.4);
+}
+
+.modal {
+    position: absolute;
+    width: 300px;
+    height: 100px;
+    margin: auto;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background-color: white;
+}
+
+.butOK {
+    margin: 20px auto;
+    position: absolute;
+    left: 0;
+    right: 0;
+    width: 50px;
+}
+
+.math {
+    width: 50px;
+    margin-right: 20px;
+}
+
+.result {
+    width: 200px;
+    margin-right: 20px;
+    margin-top: 10px;
+
+}
