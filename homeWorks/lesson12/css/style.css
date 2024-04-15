@@ -1,32 +1,38 @@
-body{
+body {
     margin: 0;
 }
-h1{
+
+h1 {
     text-align: center;
     color: #2083df;
 }
-a{
+
+a {
     text-decoration: none;
 }
-h2{
+
+h2 {
     text-align: center;
     color: #2083df;
     margin: 0;
     padding-top: 15px;
 }
-h3{
+
+h3 {
     text-align: center;
     color: #2083df;
     margin: 0;
     padding-top: 15px;
 }
-button{
+
+button {
     background-color: #2083df;
     color: white;
     cursor: pointer;
     border-radius: 5px;
 }
-.header{
+
+.header {
     background-color: white;
     height: 50px;
     padding-top: 10px;
@@ -37,76 +43,90 @@ button{
     box-sizing: border-box;
     border-bottom: 1px solid #eee;
 }
-.footer{
+
+.footer {
     background-color: white;
     height: 50px;
     width: 100%;
 }
-.headerText{
+
+.headerText {
     color: #2083df;
     margin: 0;
     font-size: 2em;
     font-weight: bold;
 }
-.mainBlock{
+
+.mainBlock {
     min-height: calc(100vh - 210px);
     background-image: url(../../../img/main.jpg);
     text-align: center;
     padding: 80px 0;
 }
-.tasksBlock{
+
+.tasksBlock {
     width: 70%;
     height: 100px;
     background-color: white;
     position: relative;
-    left:15%;
+    left: 15%;
 }
-.tasks{
+
+.tasks {
     display: flex;
     justify-content: center;
     padding: 0;
 }
-.task{
-    color:#2083df;
+
+.task {
+    color: #2083df;
     list-style: none;
     margin: 0 20px;
-    cursor: pointer;   
+    cursor: pointer;
 }
-.desigionsBlock{
+
+.desigionsBlock {
     width: 70%;
     min-height: 200px;
     background-color: white;
     position: relative;
-    left:15%;
+    left: 15%;
     margin-top: 50px;
     padding: 10px;
     box-sizing: border-box;
 }
-.block1{
+
+.block1 {
     height: 100%;
     display: none;
 }
-.block2{
+
+.block2 {
     height: 100%;
     display: none;
 }
-.block3{
+
+.block3 {
     height: 100%;
     display: none;
 }
-.button{
+
+.button {
     position: absolute;
     bottom: 10px;
     display: none;
 }
-.execute{
-    left:20px;
+
+.execute {
+    left: 20px;
 }
-.clear{
-    right:20px;
+
+.clear {
+    right: 20px;
 }
+
 @media (max-width: 800px) {
-    .tasksBlock{
+    .tasksBlock {
         height: 150px;
     }
 }

@@ -56,5 +56,11 @@ input {
     width: 200px;
     margin-right: 20px;
     margin-top: 10px;
+}
 
+@media (max-width: 460px) {
+    .math{
+        width: 90%;
+        margin-bottom: 20px;
+    }
 }
