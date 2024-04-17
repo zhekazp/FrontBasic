@@ -81,8 +81,8 @@ button {
 .shipImg{
     width: 90%;
 }
-@media (max-height: 460px) {
-    .mainBlock {
+@media (max-width: 460px) {
+    .tasksBlock {
         width: 90%;
     }
 }
