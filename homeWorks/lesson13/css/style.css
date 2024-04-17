@@ -92,7 +92,10 @@ button {
     margin: 0 10px;
 }
 #result{
-    height: 20px;
+    min-height: 20px;
+}
+#screen{
+    text-align: right;
 }
 @media (max-height: 460px) {
     .mainBlock {
