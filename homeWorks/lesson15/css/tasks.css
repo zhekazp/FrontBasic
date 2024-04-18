@@ -1,0 +1,28 @@
+span{
+    color:#2083df;
+    margin: 10px 0;
+    display: block;
+}
+
+.products{
+    display: flex;
+    width: 100%;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.product{
+    width: 150px;
+    border: 1px solid grey;
+    margin: 10px;
+}
+
+.goto{
+    position: relative;
+    top:20px;
+    bottom: 0;
+    right: 0;
+    left: 0;
+    margin: auto;
+}
+

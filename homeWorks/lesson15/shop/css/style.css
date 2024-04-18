@@ -1,0 +1,194 @@
+body{
+    margin: 0;
+}
+h1{
+    text-align: center;
+    color: white;
+}
+a{
+    text-decoration: none;
+    color: white;
+}
+h2{
+    text-align: center;
+    color: #fa558f;
+    margin: 0;
+    padding-top: 15px;
+}
+
+.header{
+    height: 50px;
+    padding-top: 7px;
+    text-align: center;
+    position: fixed;
+    width: 100%;
+    background-color: black;
+    z-index: 1;
+    box-sizing: border-box;
+}
+.footer{
+    background-color: black;
+    height: 50px;
+    width: 100%;
+}
+.headerText{
+    color: #fa558f;
+    margin: 0;
+    font-size: 2em;
+    font-weight: bold;
+}
+.menu{
+    background-color: white;
+    position: fixed;
+    top:50px;
+    height: 50px;
+    width: 100px;
+    border-bottom: 1px solid #eee;
+    width: 100%;
+    display: flex;
+    z-index: 1;
+}
+.lefthead{
+    width:30%;
+    position: relative;
+}
+.righthead{
+    width: 70%;
+    display: flex;
+    justify-content:end;
+    align-items: center;
+    margin-right: 10%;
+}
+.menuItems{
+    margin-left: 10%;
+    color: #fa558f;
+    cursor: pointer;
+}
+.menuActiveItem{
+    cursor: default;
+    color: black;
+}
+.menuSmall{
+    color: #fa558f;
+    display: none;
+}
+.smallMenuBlock{
+    display: none;
+}
+.text{
+    vertical-align: middle;
+}
+.catalog{
+    width: 250px;
+    height: 36px;
+    color: white;
+    background-color: #fa558f;
+    font-size: 20px;
+    line-height: 34px;
+    position: absolute;
+    top:0;
+    bottom: 0;
+    right: 0;
+    left: 0;
+    margin: auto;
+}
+.catItem{
+    display: none;
+    background-color: white;
+    border: 1px solid #fa558f;
+}
+.catalog:hover .catItem{
+    display: block;
+}
+.item{
+     box-sizing: border-box;
+    font-size: 18px;
+    text-align: left;
+    background-color: white;
+    cursor: pointer;
+    padding: 10px 0 10px 15px;
+    color: black;
+    border-bottom: 1px solid #fa558f;
+}
+.smallItems{
+    display: block;
+    padding: 10px;
+    box-sizing: border-box;
+    border-bottom: white solid 1px;
+    cursor: pointer;
+    color: #fa558f;
+}
+.smallActive{
+    cursor: default;
+    color: white;
+}
+.active{
+    color: #fa558f;
+    cursor: default;
+}
+.item:hover{
+    background-color: #fcfcee;
+}
+.active:hover{
+    background-color: white;
+}
+.mainBlock{
+    min-height: calc(100vh - 50px);
+    background-image: url(../img/main2.jpg!d);
+    background-size: cover;
+    padding-top: 100px;
+    box-sizing: border-box;
+}
+.mainText{
+    color:white;
+    font-style: italic;
+    font-size: 40px;
+    margin: 20px 0 0 50px;
+}
+.phone{
+    position: absolute;
+    top:14px;
+    left: 20px;   
+}
+.phoneNumber{
+    color: white;
+    position: relative;
+    left:7px;
+    top:-6px;
+
+}
+.cart{
+    position: absolute;
+    top:14px;
+    right: 20px;
+    cursor: pointer;
+}
+.textComment{
+    color:white;
+    font-style: italic;
+    font-size: 40px;
+    padding: 30px; 
+    margin: 0;
+}
+@media (max-width:900px) {
+    .catalog{
+        left: 10%;
+    }
+    .menuItems{
+        display: none;
+    }
+    .menuSmall{
+        display: block;
+    }
+    .menuSmall:hover .smallMenuBlock{
+        display: block;
+        position: absolute;
+        top:35px;
+        right: 5px;
+        width: 200px;
+        background-color: black;
+    }
+    .phone{
+        display: none;
+    }
+}
