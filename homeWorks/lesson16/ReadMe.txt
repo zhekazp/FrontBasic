@@ -1,2 +1,2 @@
 Task:
-Practice - create calculator
+Practice - create todo App
