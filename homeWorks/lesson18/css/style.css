@@ -1,0 +1,100 @@
+body {
+    margin: 0;
+}
+
+h1 {
+    text-align: center;
+    color: #2083df;
+}
+
+a {
+    text-decoration: none;
+}
+
+h2 {
+    text-align: center;
+    color: #2083df;
+    margin: 0;
+    padding-top: 15px;
+}
+
+h3 {
+    text-align: center;
+    color: #2083df;
+    margin: 0;
+    padding-top: 15px;
+}
+
+button {
+    background-color: #2083df;
+    color: white;
+    cursor: pointer;
+    border-radius: 5px;
+    margin: 10px;
+}
+
+.header {
+    background-color: white;
+    height: 50px;
+    padding-top: 10px;
+    text-align: center;
+    position: fixed;
+    width: 100%;
+    z-index: 1;
+    box-sizing: border-box;
+    border-bottom: 1px solid #eee;
+}
+
+.footer {
+    background-color: white;
+    height: 50px;
+    width: 100%;
+    box-sizing: content-box;
+}
+
+.headerText {
+    color: #2083df;
+    margin: 0;
+    font-size: 2em;
+    font-weight: bold;
+}
+
+.mainBlock {
+    min-height: calc(100vh - 220px);
+    background-image: url(../../../img/main.jpg);
+    text-align: center;
+    padding: 80px 0;
+    position: relative;
+    box-sizing: content-box;
+}
+.tasksBlock {
+    margin-left: 10%;
+    width: 80%;
+    min-height: 200px;
+    background-color: white;
+    display: flex;
+    justify-content: center;
+}
+.unit{
+    width:45%;
+    box-sizing: border-box;
+    margin: 10px;
+}
+.img{
+    width:100%;
+}
+.info{
+    margin-left: 10%;
+    width: 80%;
+    min-height: 100px;
+    background-color: white;
+}
+.console{
+    width: 90%;
+    border: 1px solid #2083df;
+    height: 100px;
+    margin-left: 5%;
+    overflow-y: auto;
+}
+
+

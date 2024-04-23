@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" href="../../img/favicon.png" type="image/x-icon">
+    <link rel="stylesheet" href="./css/style.css">
+    <script src="./js/main.js" defer></script>
+    <title>FrontBasic - Bootstrep</title>
+</head>
+
+<body>
+    <header class="header">
+        <a href="/FrontBasic/"><span class="headerText">Frontend basic</span></a>
+    </header>
+    <main class="mainBlock">
+        <div class="tasksBlock">
+            <div class="unit">
+                <img class="img" src="./img/wizard.jpg" alt="wizard">
+                <h3>Health: <span id="wizHealth"></span></h3>
+                <button class="getInfo" data-unti="1">Get info</button>
+                <button id="wizAttack">Spell</button>
+            </div>
+            <div class="unit">
+                <img class="img" src="./img/warrior.jpg" alt="warrior">
+                <h3>Health: <span id="warHealth"></span></h3>
+                <button class="getInfo" data-unti="2">Get info</button>
+                <button id="warAttack">Attack</button>
+            </div>
+        </div>
+        <div class="info">
+            <div id="butleInfo" class="console">
+            </div>
+            <button id="newGame">New game</button>
+        </div>
+    </main>
+    <footer class="footer">
+        <h2 id="footer"></h2>
+    </footer>
+</body>
+
+</html>
