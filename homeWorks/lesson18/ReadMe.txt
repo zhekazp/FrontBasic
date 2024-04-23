@@ -1,2 +1,2 @@
 Task:
-Bootstrap rows and cols
+Work with prototype
