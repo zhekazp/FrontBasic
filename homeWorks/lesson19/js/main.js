@@ -44,7 +44,7 @@ class Motorcycle extends Transport {
 const vihcle1 = new Car('Mercedes-AMG', 'GT 63 S 4-door', '2023', 4, false);
 const vihcle2 = new Car('Mercedes-AMG', 'S 500 Cabriolet', '2017', 2, true);
 const vihcle3 = new Motorcycle('BMW', 'S 1000 RR', '2022', 2, false);
-const vihcle4 = new Motorcycle('Pannonia', '250 TLF deLuxe', '1962', 2, true);
+const vihcle4 = new Motorcycle('Pannonia', '250 TLF deLuxe', '1962', 3, true);
 
 const vihcles = [vihcle1, vihcle2, vihcle3, vihcle4];
 
