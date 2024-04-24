@@ -58,7 +58,7 @@ function showInfo() {
         document.getElementById('param1').innerText = `Doors: ${currentVihle.numDoors}`;
         document.getElementById('param2').innerText = `Is convertible: ${currentVihle.isConvertible ? 'Yes' : 'No'}`;
     } else {
-        document.getElementById('param1').innerText = `numWheels: ${currentVihle.numWheels}`;
+        document.getElementById('param1').innerText = `Wheels: ${currentVihle.numWheels}`;
         document.getElementById('param2').innerText = `Has sidecar: ${currentVihle.hasSideCar ? 'Yes' : 'No'}`;
     }
 }
