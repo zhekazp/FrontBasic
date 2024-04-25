@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" href="../../img/favicon.png" type="image/x-icon">
+    <link rel="stylesheet" href="./css/style.css">
+    <script src="./js/main.js" defer></script>
+    <title>FrontBasic - classes</title>
+</head>
+
+<body>
+    <header class="header">
+        <a href="/FrontBasic/"><span class="headerText">Frontend basic</span></a>
+    </header>
+    <main class="mainBlock">
+        <div class="tasksBlock">
+          <input id="maxTimer" class="maxTimer" type="text" value="60" title="Max value = 99">
+          <button id="setTimer">Set Timer</button>
+          <div>
+          <svg width="160" height="160">
+            <circle transform="rotate(-90)" r="70" cx="-80" cy="80" />
+            <circle id="circle" transform="rotate(-90)" style="stroke-dasharray:440px 440px;" r="70" cx="-80" cy="80" />
+            <text x="30" y="112" class="timer" id="timer">60</text>
+          </svg>
+        </div>
+        <button id="start">Start</button>
+        <button id="stop">Stop</button>
+        </div>
+    </main>
+    <footer class="footer">
+        <h2 id="footer"></h2>
+    </footer>
+</body>
+
+</html>
