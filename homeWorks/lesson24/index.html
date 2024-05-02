@@ -6,7 +6,7 @@
     <link rel="shortcut icon" href="../../img/favicon.png" type="image/x-icon">
     <link rel="stylesheet" href="./css/style.css">
     <script src="./js/main.js" defer></script>
-    <title>FrontBasic - Work with fetch</title>
+    <title>FrontBasic - Work with Weather API</title>
 </head>
 
 <body>
@@ -17,12 +17,14 @@
         <div class="tasksBlock">
             
             <label>
-                Chose a country 
-                <input id="country" type="text" autocomplete="off">
+                Write a city 
+                <input id="cityInput" type="text" autocomplete="off">
             </label>
-            <div id="countries" class="countries">
+            <button id="showWeather">Show weather</button>
+            <div id="cityList" class="cities">
 
             </div>
+                <div id="massageBox"></div>
                 <div id="answer">
                    
                 </div>

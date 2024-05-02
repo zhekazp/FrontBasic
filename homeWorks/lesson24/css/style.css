@@ -12,6 +12,14 @@ a {
     color: #0d6efd;
 }
 
+button {
+    background-color: #2083df;
+    color: white;
+    cursor: pointer;
+    border-radius: 5px;
+    margin: 10px;
+}
+
 h2 {
     text-align: center;
     color: #2083df;
@@ -86,20 +94,21 @@ h3 {
     margin-top: 20px;
 }
 
-.uni{
+.city{
     font-size: 20px;
     padding: 15px 0;
     border-bottom: 1px solid #A09F9F;
+    cursor: pointer;
 }
 
-.countries {
+.cities {
     position: absolute;
     top: 82px;
     left: 0;
     right: 0;
+    max-height: 200px;
     margin: auto;
-    height: 200px;
-    width: 340px;
+    width: 400px;
     visibility: hidden;
     border: 1px solid #4186ef;
     overflow-y: auto;
@@ -107,7 +116,15 @@ h3 {
     z-index: 1;
 }
 
-#country {
+#massageBox{
+    height: 20px;
+}
+
+.temp{
+    font-size: 30px;
+}
+
+#cityInput {
     display: block;
     position: relative;
     left: 0;
@@ -122,10 +139,9 @@ h3 {
     box-sizing: border-box;
 }
 
-.countryListEl{
-    border-bottom: 1px solid #A09F9F;
-    padding: 15px 0;
-    cursor: pointer;
+.country{
+    color: #A09F9F;
+    font-size: 14px;
 }
 
 .countryName{
@@ -137,6 +153,43 @@ h3 {
     background-color: white;
 }
 
-.loading{
-    margin-top: 20px;
+.weatherInfo{
+    margin: 20px 0;
+    font-size: 20px;
+}
+
+.modalBack {
+    position: fixed;
+    z-index: 2;
+    left: 0;
+    top: 0;
+    width: 100vw;
+    height: 100vh;
+    background-color: rgba(0, 0, 0, 0.4);
+}
+
+.mymodal {
+    position: absolute;
+    width: 400px;
+    height: 100px;
+    margin: auto;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background-color: white;
+    padding: 10px;
+    border: 1px solid #0d6efd;
+}
+
+.butOK {
+    margin: 20px auto;
+    position: absolute;
+    left: 0;
+    right: 0;
+    width: 50px;
+    background-color: #2083df;
+    color: white;
+    cursor: pointer;
+    border-radius: 5px;
 }

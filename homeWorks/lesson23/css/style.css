@@ -92,7 +92,7 @@ h3 {
     border-bottom: 1px solid #A09F9F;
 }
 
-.cities {
+.countries {
     position: absolute;
     top: 82px;
     left: 0;
@@ -107,7 +107,7 @@ h3 {
     z-index: 1;
 }
 
-#cityInput {
+#country {
     display: block;
     position: relative;
     left: 0;

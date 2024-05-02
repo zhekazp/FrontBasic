@@ -1,4 +1,4 @@
-let inpuTimer;
+let countries;
 
 function initialisation() {
     document.getElementById('footer').textContent = new Date().getFullYear();
@@ -7,28 +7,38 @@ function initialisation() {
 
     const answer = document.getElementById('answer');
 
-    document.getElementById('cityInput').addEventListener('input', showCityList);
+    const timer = showSpiner(answer);
+
+    fetch('https://raw.githubusercontent.com/Hipo/university-domains-list/master/world_universities_and_domains.json')
+        .then(
+            response => {
+                if (response.status !== 200) {
+                    throw ('Server is not available');
+                }
+                return response.json()
+            })
+        .then(data => {
+            countries = [...new Set(data.map(item => item.country).sort())];
+            document.getElementById('country').disabled = false;
+            stopSpiner(timer, answer);
+        })
+        .catch(reject => {
+            stopSpiner(timer, answer);
+            answer.textContent = reject;
+            answer.style.color = 'red';
+        });
+
+    document.getElementById('country').addEventListener('focus', (e) => {
+        e.target.value = '';
+        showCountriesList();
+    });
+    document.getElementById('country').addEventListener('input', showCountriesList);
 
     document.addEventListener('click', (e) => hideCountriesList(e));
 
     document.getElementById('countries').addEventListener('click', (e) => getInfo(e.target));
 
 }
-
-function showCountriesList() {
-    
-    
-    const div = document.getElementById('countries');
-    div.style.visibility = "visible";
-    div.innerHTML = '';
-    div.innerHTML = getCountries(document.getElementById('country').value);
-}
-
-function getCitiesName(cityNmae){
-    fetch('http://api.openweathermap.org/geo/1.0/direct?q={city name},{state code},{country code}&limit={limit}&appid={API key}')
-}
-
-
 
 function getInfo(e) {
     const answer = document.getElementById('answer');

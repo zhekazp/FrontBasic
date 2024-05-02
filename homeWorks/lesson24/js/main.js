@@ -1,114 +1,158 @@
-let countries;
+const apiKey = 'bd9eefe2f200af8dea1aec9cb3024517';
+let cities;
 
 function initialisation() {
     document.getElementById('footer').textContent = new Date().getFullYear();
 
-    document.getElementById('country').disabled = true;
+    document.addEventListener('click', (e) => hideCityList(e));
 
-    const answer = document.getElementById('answer');
+    document.getElementById('showWeather').addEventListener('click', getWeather);
 
-    const timer = showSpiner(answer);
-
-    fetch('https://raw.githubusercontent.com/Hipo/university-domains-list/master/world_universities_and_domains.json')
-        .then(
-            response => {
-                if (response.status !== 200) {
-                    throw ('Server is not available');
-                }
-                return response.json()
-            })
-        .then(data => {
-            countries = [...new Set(data.map(item => item.country).sort())];
-            document.getElementById('country').disabled = false;
-            stopSpiner(timer, answer);
-        })
-        .catch(reject => {
-            stopSpiner(timer, answer);
-            answer.textContent = reject;
-            answer.style.color = 'red';
-        });
-
-    document.getElementById('country').addEventListener('focus', (e) => {
-        e.target.value = '';
-        showCountriesList();
-    });
-    document.getElementById('country').addEventListener('input', showCountriesList);
-
-    document.addEventListener('click', (e) => hideCountriesList(e));
-
-    document.getElementById('countries').addEventListener('click', (e) => getInfo(e.target));
+    document.getElementById('cityList').addEventListener('click', (e) => showWeatherByCity(e));
 
 }
 
-function getInfo(e) {
-    const answer = document.getElementById('answer');
-    if (e.classList.contains('countryListEl')) {
-        const country = e.innerText;
-        document.getElementById('countries').style.visibility = "hidden";
-        const timer = showSpiner(answer);
-        document.getElementById('country').value = '';
-        let html = '';
+function getWeather() {
+    const cityName = document.getElementById('cityInput').value;
+    if (cityName !== '') {
+        const spinerBox = document.getElementById('massageBox');
 
-        fetch(`http://universities.hipolabs.com/search?country=${country}`)
-            .then(
-                response => {
-                    if (response.status !== 200) {
-                        throw ('Server is not available');
-                    }
-                    return response.json()
-                })
-            .then(data => {
-                data.forEach(item => {
-                    html += `
-                    <a href='${item.web_pages[0]}' target='blank'> 
-                        <div class="uni">
-                                ${item.name}
-                        </div>
-                    </a>
-                    `;
-                });
-                document.getElementById('country').disabled = false;
-                stopSpiner(timer, answer);
-                document.getElementById('answer').innerHTML = 
-                `<div class='countryName'>${country} has Universyties:</div>` + html;
-            })
-            .catch(reject => {
-                stopSpiner(timer, answer);
-                answer.textContent = reject;
-                answer.style.color = 'red';
+        disableElements();
+        const timer = showSpiner(spinerBox);
+
+        fetch(`https://api.openweathermap.org/geo/1.0/direct?q=${cityName}&limit=5&appid=${apiKey}`)
+            .then(response => response.json()).then(response => response.map(item => {
+                return {
+                    city: item.name,
+                    country: item.country,
+                    state: item.state,
+                    lat: item.lat,
+                    lon: item.lon
+                }
+            })).then(response => {
+                if (response.length === 0) {
+                    showModal('City not fonud');
+                } else if (response.length === 1) {
+                    getCityWeather(response[0].lat, response[0].lon)
+                        .then(response => showWeather(response));
+                } else {
+                    showCytiesList(response);
+                }
+            }).catch(reject => showModal('Server Error: ' + reject))
+            .finally(() => {
+                enableElements();
+                stopSpiner(timer, spinerBox);
             });
+    } else {
+        showModal('City is empty');
     }
 }
 
-function showCountriesList() {
-    const div = document.getElementById('countries');
+function showWeather(weather) {
+    const mainInfo = weather.weather[0];
+    const info = weather.main;
+    console.log(weather.main.temp_min, weather.main.temp_max);
+    const html = `
+        <div class='weatherInfo'>
+            ${mainInfo.main} (${mainInfo.description})
+            </div>
+        <img src='http://openweathermap.org/img/w/${mainInfo.icon}.png' alt='mainInfo.main'>
+        <div class='weatherInfo'>
+           <span class='temp'>
+                ${Math.round(info.temp)}°
+            </span>
+        </div>
+    `;
+    document.getElementById('answer').innerHTML = html;
+}
+
+function disableElements() {
+    document.getElementById('showWeather').disabled = true;
+    document.getElementById('cityInput').disabled = true;
+}
+
+function enableElements() {
+    document.getElementById('showWeather').disabled = false;
+    document.getElementById('cityInput').disabled = false;
+}
+
+function showCytiesList(cities) {
+    const div = document.getElementById('cityList');
     div.style.visibility = "visible";
     div.innerHTML = '';
-    div.innerHTML = getCountries(document.getElementById('country').value);
+    let html = '';
+    cities.forEach(item => {
+        html += `
+                    <div class="city" data-lat='${item.lat}' data-lon='${item.lon}'>
+                            ${item.city} 
+                            <span class='country'>
+                                (${item.state === undefined ? "" : "St: " + item.state} C: ${item.country})
+                            </span> 
+                    </div>
+                `;
+    });
+    div.innerHTML = html;
 }
 
-function hideCountriesList(e) {
-    if (e.target.id !== 'country'
-        && e.target.id !== 'countries'
-        && e.target.className !== 'countryListEl'
-        && document.getElementById('countries').style.visibility === "visible") {
-        document.getElementById('countries').style.visibility = "hidden";
+
+function hideCityList(e) {
+    if (e.target.id !== 'cityList'
+        && e.target.className !== 'city'
+        && e.target.className !== 'country'
+        && document.getElementById('cityList').style.visibility === "visible") {
+        document.getElementById('cityList').style.visibility = "hidden";
     }
 }
 
-function getCountries(value) {
-    let html = '';
-    countries.filter(
-        item => {
-            const itemLowerCase = item.toLowerCase();
-            return itemLowerCase.includes(value.toLowerCase())
-        }).slice(0, 10)
-        .forEach(element =>
-            html += `<div class="countryListEl">
-    ${element}
-    </div>`);
-    return html;
+function getCityWeather(lat, lon) {
+    return fetch(`https://api.openweathermap.org/data/2.5/weather?lat=${lat}&lon=${lon}&appid=${apiKey}&units=metric`)
+        .then(response => response.json());
 }
+
+function showWeatherByCity(e) {
+    let el=e.target;
+    if(el.classList.contains('country')){
+        el=e.target.parentNode;
+    }
+    if (el.classList.contains('city')) {
+        getCityWeather(el.dataset.lat, el.dataset.lon)
+        .then(response => showWeather(response));
+        document.getElementById('cityList').style.visibility = "hidden";
+    }
+}
+
+function removeModal() {
+    const modal = document.getElementById('modalDialog');
+    modal.removeEventListener('click', removeModal)
+    modal.remove();
+    clearTimeout(timerModal);
+}
+
+let timerModal;
+
+function showModal(message) {
+    const back = document.createElement('div');
+    back.classList = 'modalBack';
+    back.id = 'modalDialog';
+    document.body.appendChild(back);
+
+    const modal = document.createElement('div');
+    modal.classList = 'mymodal';
+    back.appendChild(modal);
+
+    const info = document.createElement('h3');
+    info.textContent = message;
+    modal.appendChild(info);
+
+    const button = document.createElement('button');
+    modal.appendChild(button);
+    button.textContent = "OK";
+    button.classList.add('butOK');
+    button.addEventListener("click", removeModal);
+    timerModal = setTimeout(() => { removeModal(timerModal) }
+        , 4000);
+}
+
 
 function showSpiner(e) {
     let currentEl = 1;
