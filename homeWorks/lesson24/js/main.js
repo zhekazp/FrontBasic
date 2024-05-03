@@ -188,5 +188,5 @@ function stopSpiner(timer, e) {
 
 initialisation();
 
-
+showModal('App need a weather token');
 
