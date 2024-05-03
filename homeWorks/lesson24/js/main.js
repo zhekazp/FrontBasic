@@ -1,4 +1,4 @@
-const apiKey = 'bd9eefe2f200af8dea1aec9cb3024517';
+const apiKey = '';
 let cities;
 
 function initialisation() {
