@@ -1,4 +1,4 @@
-const apiKey = '';
+const apiKey = 'bd9eefe2f200af8dea1aec9cb3024517';
 let cities;
 
 function initialisation() {
@@ -188,5 +188,5 @@ function stopSpiner(timer, e) {
 
 initialisation();
 
-showModal('App need a weather token');
+//showModal('App need a weather token');
 

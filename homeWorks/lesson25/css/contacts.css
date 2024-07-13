@@ -1,0 +1,49 @@
+input{
+    border-radius: 5px;
+    border: 1px solid #fa558f;
+    margin: 10px;
+    width: 60%;
+}
+textarea{
+    border-radius: 5px;
+    border: 1px solid #fa558f;
+    margin-bottom: 10px;
+    width: 60%;
+}
+.form{
+    display: block;
+    width:70%;
+    background-color: white;
+    position: relative;
+    top: 0;
+    bottom: 0;
+    right: 0;
+    left: 0;
+    margin: auto;
+    text-align: center;
+    color: #fa558f;
+}
+.submit{
+    color: #fff;
+    text-decoration: none;
+    font-weight: 600;
+    padding: 5px 20px;
+    font-size: 18px;
+    display: inline-block;
+    border-radius: 5px;
+    background: #fa558f;
+    border: none;
+    outline: none;
+    cursor: pointer;
+    margin-bottom: 10px;
+}
+.contactText{
+    color:white;
+    font-style: italic;
+    font-size: 40px;
+    margin: 0;
+    padding: 20px;
+}
+.mainBlock{
+    text-align: center;
+}

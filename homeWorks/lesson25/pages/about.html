@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../css/style.css">
+    <link rel="shortcut icon" href="../../../img/favicon.png" type="image/x-icon">
+    <script src="../js/cat.js" defer></script>
+    <title>FrontBasic - js work with objects</title>
+</head>
+
+<body>
+    <header class="header">
+        <div class="phone">
+            <a href="../../index.html">
+                <span>GO to TASKS</span>
+            </a>
+        </div>
+        <a href="../index.html"><span class="headerText">Computer World</span></a>
+        <a href="./cart.html">
+            <img class="cart" src="../img/cart.png" alt="cart">
+        </a>
+        <div class="menu">
+            <div class="lefthead">
+                <div class="catalog">
+                    <span class="text">CATALOG</span>
+                    <div class="catItem">
+                        <div cat="0" class="item">- Computers</div>
+                        <div cat="1" class="item">- Noteboks</div>
+                        <div cat="2" class="item">- Monitors</div>
+                    </div>
+                </div>
+            </div>
+            <div class="righthead">
+                <div class="menuSmall">MENU
+                    <div class="smallMenuBlock">
+                        <a href="../index.html">
+                            <span class="smallItems">HOME</span>
+                        </a>
+                        <span class="smallItems smallActive">ABAUT</span>
+                        <a href="./contacts.html">
+                            <span class="smallItems">CONTACTS</span>
+                        </a>
+                    </div>
+                </div>
+                <a class="menuItems" href="../index.html">
+                    <span>HOME</span>
+                </a>
+                <span class="menuItems menuActiveItem">ABAUT</span>
+                <a class="menuItems" href="./contacts.html">
+                    <span>CONTACTS</span>
+                </a>
+            </div>
+        </div>
+    </header>
+    <main class="mainBlock">
+        <h1>About</h1>
+        <p class="textComment">Lorem ipsum dolor sit amet consectetur adipisicing elit. Esse ex aliquam commodi unde
+            possimus dolores distinctio, quos neque nesciunt necessitatibus laudantium. Reiciendis quibusdam enim
+            perspiciatis, ratione cupiditate aliquid voluptate ipsa?</p>
+    </main>
+    <footer class="footer">
+        <h2 id="footer"></h2>
+    </footer>
+</body>
+
+</html>
+<script>
+    document.getElementById('footer').innerHTML = new Date().getFullYear();
+</script>

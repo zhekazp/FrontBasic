@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./css/style.css">
+    <link rel="stylesheet" href="./css/shop.css">
+    <link rel="shortcut icon" href="../../img/favicon.png" type="image/x-icon">
+    <script src="./js/shop.js" defer></script>
+    <title>FrontBasic - js work with objects</title>
+</head>
+
+<body>
+    <header class="header">
+        <div class="phone">
+            <a href="../../index.html">
+                <span>GO to TASKS</span>
+            </a>
+        </div>
+        <a href="../index.html"><span class="headerText">Computer World</span></a>
+        <a href="./cart.html">
+            <img class="cart" src="../img/cart.png" alt="cart">
+        </a>
+        <div class="menu">
+            <div class="lefthead">
+                <div class="catalog">
+                    <span class="text">CATALOG</span>
+                    <div class="catItem" id="catItem">
+                        
+                    </div>
+                </div>
+            </div>
+            <div class="righthead">
+                <div class="menuSmall">MENU
+                    <div class="smallMenuBlock">
+                        <a href="../index.html">
+                            <span class="smallItems">HOME</span>
+                        </a>
+                        <a href="./about.html">
+                            <span class="smallItems">ABAUT</span>
+                        </a>
+                        <a href="./contacts.html">
+                            <span class="smallItems">CONTACTS</span>
+                        </a>
+                    </div>
+                </div>
+                <a class="menuItems" href="../index.html">
+                    <span>HOME</span>
+                </a>
+                <a class="menuItems" href="./about.html">
+                    <span>ABAUT</span>
+                </a>
+                <a class="menuItems" href="./contacts.html">
+                    <span>CONTACTS</span>
+                </a>
+            </div>
+        </div>
+    </header>
+    <main class="mainBlockShop">
+        <aside class="side">
+            <div>
+                <h3>SORT</h3>
+                <div class="cancelSort">
+                    <h4 id="sortTask"></h4>
+                    <button id="clearBut" class="sortBut clear">CLEAR</button>
+                </div>
+                <div class="sort">
+                    <div class="sortItem">
+                        <label> Max price:
+                            <input id="priceSort" class="sortInput" type="text">
+                        </label>
+                    </div>
+                    <button id="sortBut" class="sortBut">SORT</button>
+                </div>
+
+            </div>
+
+        </aside>
+        <div id="products" class="shop">
+
+        </div>
+    </main>
+    <footer class="footer">
+        <h2 id="footer"></h2>
+    </footer>
+</body>
+
+</html>
+<script>
+    document.getElementById('footer').innerHTML = new Date().getFullYear();
+</script>

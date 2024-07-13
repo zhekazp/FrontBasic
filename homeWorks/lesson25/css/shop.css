@@ -1,0 +1,108 @@
+h4{
+    color: #fa558f;
+}
+.mainBlockShop{
+        min-height: calc(100vh - 50px);
+        text-align: center;
+        display: flex;
+        padding-top: 100px;
+        box-sizing: border-box;
+}
+.side{
+    width: 25%;
+    border-right: 1px solid #eee;
+    
+}
+.shop{
+    width: 75%;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: start;
+}
+.productGrid {
+    width: 22%;
+    min-width: 245px;
+    border: 1.5px solid #eee;
+    margin: 40px;
+    cursor: pointer;
+    font-size: 18px;
+}
+.productInfo{
+    font-size: 18px;
+    background-color: #eaeaea;
+    padding: 10px 0;
+}
+.price{
+    font-size: 20px;
+    font-weight: bold;
+}
+.productPic{
+        width: 100%;
+}
+.itemAdd{
+    color: #fff;
+    text-decoration: none;
+    font-weight: 600;
+    padding: 0.7em 1.5em;
+    font-size: 18px;
+    display: inline-block;
+    border-radius: 5px;
+    background: #fa558f;
+    border: none;
+    outline: none;
+    cursor: pointer;
+}
+.sortBut{
+    color: #fff;
+    width: 150px;
+    text-decoration: none;
+    font-size: 18px;
+    display: inline-block;
+    border-radius: 5px;
+    background: #fa558f;
+    border: none;
+    outline: none;
+    cursor: pointer;
+}
+.clear{
+   visibility: hidden;
+}
+.sort{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    margin-bottom: 40px;
+}
+.sortItem{
+    width: 100%;
+    color:#fa558f;
+    margin-bottom: 20px;
+   }
+.sortInput{
+    border-radius: 5px;
+    border: 2px solid #fa558f;
+    box-shadow: 1px 1px 2px 0 #fa558f;
+}   
+
+.sortInput:focus{
+    outline: #fa558f;
+    border: 2px solid #fa558f;
+    box-shadow: 1px 1px 2px 0 #fa558f;
+} 
+.grouping{
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    margin-bottom: 10px;
+    color: #fa558f;
+    font-size: 24px;
+    display: block;
+}
+.cancelSort{
+    height: 100px;
+}
+@media (max-width:900px) {
+    .sortItem{
+        width: 90%;
+    }
+}
